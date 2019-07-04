@@ -26,11 +26,13 @@ call the service as you like, for me I use curl :
 ```sh
 $ curl --header "content-type: text/xml" -d @request.xml http://localhost:8080/soapAndRest/ws
 ```
-REST ws :
+
+the wsdl : http://localhost:8080/soapAndRest/ws/countries.wsdl
+
+## REST ws :
 
 just open the url below in your browser, it's a simple http Get :
 
 http://localhost:8080/soapAndRest/greeting?name=User
 
 in this ws the http://www.dneonline.com/calculator.asmx?WSDL is called to calculat 11+12 and returning the result in the id of the response
-
