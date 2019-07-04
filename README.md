@@ -4,11 +4,13 @@ this maven project use spring boot to provide soap and rest webservices example 
 this project also consume a ADD soap webservice found in the internet http://www.dneonline.com/calculator.asmx?WSDL 
 to be returned in rest webservice created as a response
 
-to test this application 
-soap ws : 
+to test this application
+
+## soap ws : 
 
 create a new file request.xml
 
+```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
 				  xmlns:gs="http://spring.io/guides/gs-producing-web-service">
    <soapenv:Header/>
@@ -18,12 +20,13 @@ create a new file request.xml
       </gs:getCountryRequest>
    </soapenv:Body>
 </soapenv:Envelope>
-
+```
 call the service as you like, for me I use curl :
 
+```sh
 $ curl --header "content-type: text/xml" -d @request.xml http://localhost:8080/soapAndRest/ws
-
-rest ws :
+```
+REST ws :
 
 just open the url below in your browser, it's a simple http Get :
 
