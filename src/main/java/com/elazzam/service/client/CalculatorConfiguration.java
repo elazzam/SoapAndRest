@@ -8,7 +8,7 @@ import org.springframework.oxm.jaxb.Jaxb2Marshaller;
  * Spring WS uses Spring Framework’s OXM module which has the Jaxb2Marshaller to serialize and deserialize XML requests.
  * The marshaller is pointed at the collection of generated domain objects and will use them to both serialize and deserialize between XML and POJOs.
 
-The countryClient is created and configured with the URI of the country service shown up above. It is also configured to use the JAXB marshaller.
+The calculatorClient is created and configured with the URI of the calculator service shown up above. It is also configured to use the JAXB marshaller.
  */
 @Configuration
 public class CalculatorConfiguration {
@@ -23,7 +23,7 @@ public class CalculatorConfiguration {
 	}
 
 	@Bean
-	public CalculatorClient countryClient(Jaxb2Marshaller marshaller) {
+	public CalculatorClient calculatorClient(Jaxb2Marshaller marshaller) {
 		CalculatorClient client = new CalculatorClient();
 		client.setDefaultUri("http://www.dneonline.com/calculator.asmx");
 		client.setMarshaller(marshaller);
